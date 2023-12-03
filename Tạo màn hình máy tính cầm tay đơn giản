@@ -58,3 +58,20 @@ public class MayTinhCamTayDonGian extends JFrame {
     }
 
 }
+import View.MayTinhCamTayDonGian;
+
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        try{
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); // câu lệnh để đặt giao diện người dùng (Look and Feel) của ứng dụng Swing để giống với hệ điều hành.
+            new MayTinhCamTayDonGian();
+        }catch (Exception exception){
+            exception.printStackTrace();
+        }
+        MayTinhCamTayDonGian m1 = new MayTinhCamTayDonGian();
+        m1.MyCalculator();
+    }
+}
