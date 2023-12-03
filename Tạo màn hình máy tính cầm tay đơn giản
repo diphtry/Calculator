@@ -1,0 +1,60 @@
+package View;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class MayTinhCamTayDonGian extends JFrame {
+    public void MyCalculator()
+    {
+        this.setTitle("Calculator");
+        this.setSize(300,300);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JTextField jTextField = new JTextField(60); //Tạo một đối tượng JTextField mới. JTextField là một thành phần cho phép người dùng nhập văn bản.
+        JPanel jPanel = new JPanel(); // Tạo một JPanel mới với một double buffer và một Flow Layout.
+        jPanel.setLayout(new BorderLayout());
+        jPanel.add(jTextField, BorderLayout.CENTER); //
+
+        JButton jButton0 = new JButton("0");
+        JButton jButton1 = new JButton("1");
+        JButton jButton2 = new JButton("2");
+        JButton jButton3 = new JButton("3");
+        JButton jButton4 = new JButton("4");
+        JButton jButton5 = new JButton("5");
+        JButton jButton6 = new JButton("6");
+        JButton jButton7 = new JButton("7");
+        JButton jButton8 = new JButton("8");
+        JButton jButton9 = new JButton("9");
+        JButton jButtoncong = new JButton("+");
+        JButton jButtontru = new JButton("-");
+        JButton jButtonnhan = new JButton("*");
+        JButton jButtonchia = new JButton("/");
+        JButton jButtonbang = new JButton("=");
+        JPanel jPanelButton = new JPanel(); // Tạo một JPanel mới với một double buffer và một Flow Layout.
+        jPanelButton.setLayout(new GridLayout(5, 3, 10, 10)); //setlayout các nút trên máy tính dạng GridLayout 5 hàng 3 cột khoang cách giữa các cột và hàng là 10
+
+        jPanelButton.add(jButton0);
+        jPanelButton.add(jButton1);
+        jPanelButton.add(jButton2);
+        jPanelButton.add(jButton3);
+        jPanelButton.add(jButton4);
+        jPanelButton.add(jButton5);
+        jPanelButton.add(jButton6);
+        jPanelButton.add(jButton7);
+        jPanelButton.add(jButton8);
+        jPanelButton.add(jButton9);
+        jPanelButton.add(jButtoncong);
+        jPanelButton.add(jButtontru);
+        jPanelButton.add(jButtonnhan);
+        jPanelButton.add(jButtonchia);
+        jPanelButton.add(jButtonbang);
+
+        this.add(jPanel, BorderLayout.NORTH); //Thêm JPanel vào vị trí Bắc của cửa sổ ứng dụng.
+        this.add(jPanelButton, BorderLayout.CENTER);//  được sử dụng để thêm jPanelButton vào vị trí Trung tâm của cửa sổ ứng dụng.
+
+        this.setVisible(true);
+
+    }
+
+}
